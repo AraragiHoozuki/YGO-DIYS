@@ -1,6 +1,13 @@
 --海龙 赫朗格尼尔
 --[[①：每次自己的結束階段發動。自己場上·手牌的龍族怪獸等級上升1。②：場上的這張卡被破壞時，將自己手牌·場上的1隻龍族怪獸送入墓地才能發動。這張卡回到手卡。]]--
 function c51696005.initial_effect(c)
+	--cannot special summon
+	local e=Effect.CreateEffect(c)
+	e:SetProperty(EFFECT_FLAG_CANNOT_DISABLE+EFFECT_FLAG_UNCOPYABLE)
+	e:SetType(EFFECT_TYPE_SINGLE)
+	e:SetCode(EFFECT_SPSUMMON_CONDITION)
+	e:SetValue(aux.FALSE)
+	c:RegisterEffect(e)
 	--atk/def  
 	local e1=Effect.CreateEffect(c)  
 	e1:SetType(EFFECT_TYPE_SINGLE)  
