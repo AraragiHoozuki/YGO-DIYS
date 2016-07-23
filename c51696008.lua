@@ -47,7 +47,7 @@ function c51696008.e2op(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
 	Duel.NegateActivation(ev)
 	if re:GetHandler():IsRelateToEffect(re) then
-		Duel.Destroy(eg,REASON_EFFECT)
+		Duel.Remove(eg,POS_FACEUP,REASON_EFFECT)
 	end
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_SINGLE)
