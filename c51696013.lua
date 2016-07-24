@@ -41,7 +41,7 @@ end
 
 
 function c51696013.filter(c,e,tp)
-	return c:IsRace(RACE_DRAGON) and c:IsAbleToHand()
+	return c:IsRace(RACE_DRAGON) and c:IsAbleToHand() and c:GetAttack()<=1000
 end
 function c51696013.e2tg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(c51696013.filter,tp,LOCATION_DECK,0,1,nil,e,tp) end
