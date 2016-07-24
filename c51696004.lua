@@ -37,12 +37,14 @@ function c51696004.lvop(e,tp,eg,ep,ev,re,r,rp)
 	local hg=Duel.GetFieldGroup(tp,LOCATION_HAND+LOCATION_MZONE,0)
 	local tc=hg:GetFirst()
 	while tc do
+		if tc:GetLevel()<=11 and tc:IsRace(RACE_DRAGON) then
 		local e1=Effect.CreateEffect(c)
 		e1:SetType(EFFECT_TYPE_SINGLE)
 		e1:SetCode(EFFECT_UPDATE_LEVEL)
 		e1:SetValue(1)
 		e1:SetReset(RESET_TOGRAVE+RESET_REMOVE+RESET_TODECK)
 		tc:RegisterEffect(e1)
+		end
 		tc=hg:GetNext()
 	end
 end
