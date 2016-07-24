@@ -40,7 +40,7 @@ function c51696009.initial_effect(c)
 	--destruir
 	local e4=Effect.CreateEffect(c)
 	e4:SetCategory(CATEGORY_DESTROY)
-	e4:SetType(EFFECT_TYPE_TRIGGER_F)
+	e4:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_TRIGGER_F)
 	e4:SetRange(LOCATION_MZONE)
 	e4:SetCode(EVENT_PHASE+PHASE_END)
 	e4:SetLabel(12)
